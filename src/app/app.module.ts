@@ -16,6 +16,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { RouterModule, Routes } from '@angular/router';
 import { UserLoginFormComponent } from './user-login-form/user-login-form.component';
@@ -41,7 +42,7 @@ const appRoutes: Routes = [
     UserProfileComponent,
     GenreComponent,
     DirectorComponent,
-    SynopsisComponent
+    SynopsisComponent,
   ],
   imports: [
     BrowserModule,

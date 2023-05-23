@@ -11,8 +11,11 @@ export class SynopsisComponent implements OnInit {
   constructor(
     @Inject(MAT_DIALOG_DATA)
     public data: {
-      Name: string;
+      Title: string;
+      Director: string;
+      Genre: string;
       Description: string;
+      Image: string;
     }
   ) { }
 

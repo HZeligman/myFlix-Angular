@@ -47,19 +47,12 @@ export class UserProfileComponent implements OnInit {
   updateUserInfo(): void {
     this.fetchApiData.editUser(this.updatedUser).subscribe((result) => {
       console.log(result);
-      if (this.user.Username !== result.Username || this.user.Password !== result.Password) {
-        localStorage.clear();
-        this.router.navigate(['welcome']);
-        this.snackBar.open(result, 'OK', {
-          duration: 2000
-        });
-      } else {
-        this.snackBar.open(result, 'OK', {
-          duration: 2000
-        });
-      }
-    }),
-  };
+      this.snackBar.open(result, 'OK', {
+        duration: 2000
+      });
+      localStorage.setItem('username', result.Username);
+    })
+  }
 
   deleteAccount(): void {
     if (confirm('Your profile will be deleted permanently.')) {

@@ -25,7 +25,6 @@ export class MovieCardComponent {
 
   ngOnInit(): void {
     this.getMovies();
-    this.getFavorites(),
   }
 
   getMovies(): void {
